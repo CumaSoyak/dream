@@ -2,20 +2,57 @@
 androidx-lifecycle = "2.8.2"
 compose-plugin = "1.6.11"
 junit = "4.13.2"
-kotlin = "2.0.20"
-ktor = "2.3.12"
+kotlin = "2.0.21"
+ktor = "3.0.0"
 logback = "1.5.8"
+coilCompose = "2.7.0"
+coilCompose3 = "3.0.0-alpha10"
+coroutines = "1.9.0"
+kotlinxSerialization = "1.7.3"
+
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
-kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
 androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
 logback = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
-ktor-server-core = { module = "io.ktor:ktor-server-core-jvm", version.ref = "ktor" }
+ktor-server-core = { module = "io.ktor:ktor-server-core-jvm" }
 ktor-server-netty = { module = "io.ktor:ktor-server-netty-jvm", version.ref = "ktor" }
 ktor-server-tests = { module = "io.ktor:ktor-server-tests-jvm", version.ref = "ktor" }
+ktor-server-testing = { module = "io.ktor:ktor-server-testing", version.ref = "ktor" }
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-client-cio = { group = "io.ktor", name = "ktor-client-cio", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+
+kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+
+kotlinx-serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-core", version.ref = "kotlinxSerialization" }
+
+
+
+coilCompose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coilCompose" }
+coil3-compose = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coilCompose3" }
+coil3-network-ktor = { group = "io.coil-kt.coil3", name = "coil-network-ktor3", version.ref = "coilCompose3" }
+
+
+ktor-server-call-logging = { group = "io.ktor", name = "ktor-server-call-logging-jvm" }
+
+ktor-server-content-negotiation = { group = "io.ktor", name = "ktor-server-content-negotiation-jvm" }
+exposed-core = { group = "org.jetbrains.exposed", name = "exposed-core", version = "0.41.1" }
+exposed-dao = { group = "org.jetbrains.exposed", name = "exposed-dao", version = "0.41.1" }
+exposed-jdbc = { group = "org.jetbrains.exposed", name = "exposed-jdbc", version = "0.41.1" }
+h2 = { group = "com.h2database", name = "h2", version = "2.1.214" }
+mysql-connector-java = { group = "mysql", name = "mysql-connector-java", version = "8.0.33" }
+postgresql = { group = "org.postgresql", name = "postgresql", version = "42.6.0" }
+logback-classic = { group = "ch.qos.logback", name = "logback-classic", version = "1.4.5" }
+koin-ktor = { group = "io.insert-koin", name = "koin-ktor", version = "3.4.1" }
+hikaricp = { group = "com.zaxxer", name = "HikariCP", version = "5.0.1" }
+flyway-core = { group = "org.flywaydb", name = "flyway-core", version = "9.16.0" }
+kotlinx-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+
+
 
 [plugins]
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
@@ -23,3 +60,6 @@ compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "
 kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 ktor = { id = "io.ktor.plugin", version.ref = "ktor" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+

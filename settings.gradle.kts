@@ -11,6 +11,9 @@ pluginManagement {
             }
         }
         mavenCentral()
+        maven {
+            url = uri("https://maven.pkg.jetbrains.space/public/p/ktor/eap")
+        }
         gradlePluginPortal()
     }
 }
@@ -24,6 +27,9 @@ dependencyResolutionManagement {
                 includeGroupAndSubgroups("com.google")
             }
         }
+        maven {
+            url = uri("https://maven.pkg.jetbrains.space/public/p/ktor/eap")
+        }
         mavenCentral()
     }
 }
@@ -31,3 +37,4 @@ dependencyResolutionManagement {
 include(":composeApp")
 include(":server")
 include(":shared")
+include(":compose-web")

@@ -21,3 +21,25 @@ We would appreciate your feedback on Compose/Web and Kotlin/Wasm in the public S
 If you face any issues, please report them on [GitHub](https://github.com/JetBrains/compose-multiplatform/issues).
 
 You can open the web application by running the `:composeApp:wasmJsBrowserDevelopmentRun` Gradle task.
+
+
+PostgreSQL'i başlatmak için:
+
+brew services start postgresql
+
+
+PostgreSQL'in durumunu kontrol etmek için:
+
+brew services list
+
+PostgreSQL'e bağlanma:
+
+psql postgres
+
+Veritabanlarını listeleme: 
+
+\l
+
+Veritabanına bağlanma: Eğer belirli bir veritabanına bağlanmak istiyorsanız:
+
+\c dream
